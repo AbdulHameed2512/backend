@@ -3,7 +3,9 @@ import mongoose from "mongoose";
 import router from "./routes/userRoute";
 const app = express()
 const cors = require('cors')
-app.use(cors());
+app.use(cors({
+    origin:"http://localhost:4200/"
+}));
 app.use(express.json())
 app.use('/api/user',router)
 // http://localhost:5000/api/user/
